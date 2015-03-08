@@ -4,9 +4,7 @@ Polling app with crowd sourced questions. Questions are limited to yes or no ans
 
 ## Purpose:
 A exploration into [parse](https://parse.com).
-> "Relax. Your app's backend is already done"
-- Parse marketing Team
+> "Relax. Your app's backend is already done" - Parse marketing Team
 
 I don't think this is necessarily true, something like this might work better,
-> "Parse, write your backend on your front end"
-- Me
+> "Parse, write your backend on your frontend" - Me
