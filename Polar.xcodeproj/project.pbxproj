@@ -24,7 +24,6 @@
 		193990B31A34F47300E18528 /* PLRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 193990B21A34F47300E18528 /* PLRModel.m */; };
 		194D51D81A32CD2B00DE8DB5 /* PLRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 194D51D71A32CD2B00DE8DB5 /* PLRTableViewController.m */; };
 		196EBFEA1A3698AD00FEE949 /* PLRAskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EBFE91A3698AD00FEE949 /* PLRAskQuestionViewController.m */; };
-		19CB15BF1A3ABD56008034FD /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19CB15BE1A3ABD56008034FD /* ReadMe.txt */; };
 		19CCBE511A3256DE00C86EF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CCBE501A3256DE00C86EF0 /* main.m */; };
 		19CCBE541A3256DE00C86EF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CCBE531A3256DE00C86EF0 /* AppDelegate.m */; };
 		19CCBE5A1A3256DE00C86EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CCBE581A3256DE00C86EF0 /* Main.storyboard */; };
@@ -69,7 +68,6 @@
 		194D51D71A32CD2B00DE8DB5 /* PLRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLRTableViewController.m; sourceTree = "<group>"; };
 		196EBFE81A3698AD00FEE949 /* PLRAskQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLRAskQuestionViewController.h; sourceTree = "<group>"; };
 		196EBFE91A3698AD00FEE949 /* PLRAskQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLRAskQuestionViewController.m; sourceTree = "<group>"; };
-		19CB15BE1A3ABD56008034FD /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		19CCBE4B1A3256DE00C86EF0 /* Polar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CCBE4F1A3256DE00C86EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CCBE501A3256DE00C86EF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 		19CCBE421A3256DE00C86EF0 = {
 			isa = PBXGroup;
 			children = (
-				19CB15BE1A3ABD56008034FD /* ReadMe.txt */,
 				19CCBE4D1A3256DE00C86EF0 /* Polar */,
 				19CCBE671A3256DE00C86EF0 /* PolarTests */,
 				19CCBE4C1A3256DE00C86EF0 /* Products */,
@@ -335,7 +332,6 @@
 			files = (
 				19CCBE5A1A3256DE00C86EF0 /* Main.storyboard in Resources */,
 				19CCBE5F1A3256DE00C86EF0 /* LaunchScreen.xib in Resources */,
-				19CB15BF1A3ABD56008034FD /* ReadMe.txt in Resources */,
 				19CCBE5C1A3256DE00C86EF0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

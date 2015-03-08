@@ -16,13 +16,13 @@
     
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ polar keys ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-    //[Parse setApplicationId:@"erywO8cjjYf1vmiyfzlbzq7bOqGKEW7aCcrFEJXs"
-    //              clientKey:@"MJoaNFB60siYWiiITvXmzgsaKsFDfg62A0DCoGKn"];
+    [Parse setApplicationId:@"erywO8cjjYf1vmiyfzlbzq7bOqGKEW7aCcrFEJXs"
+                  clientKey:@"MJoaNFB60siYWiiITvXmzgsaKsFDfg62A0DCoGKn"];
     
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ polar-dev keys ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-    [Parse setApplicationId:@"FIOAl0Vv8rawXobSyyTiV8H0wS8GGyju9JGugKeG"
-                  clientKey:@"AdR7Hq15Yb5kqyAQVUFd8tXZnQVqFHPJjIBPeSeq"];
+    //[Parse setApplicationId:@"FIOAl0Vv8rawXobSyyTiV8H0wS8GGyju9JGugKeG"
+    //              clientKey:@"AdR7Hq15Yb5kqyAQVUFd8tXZnQVqFHPJjIBPeSeq"];
     
     //Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
