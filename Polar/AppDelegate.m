@@ -7,39 +7,48 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
-@end
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ polar keys ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    //[Parse setApplicationId:@"erywO8cjjYf1vmiyfzlbzq7bOqGKEW7aCcrFEJXs"
+    //              clientKey:@"MJoaNFB60siYWiiITvXmzgsaKsFDfg62A0DCoGKn"];
+    
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ polar-dev keys ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    [Parse setApplicationId:@"FIOAl0Vv8rawXobSyyTiV8H0wS8GGyju9JGugKeG"
+                  clientKey:@"AdR7Hq15Yb5kqyAQVUFd8tXZnQVqFHPJjIBPeSeq"];
+    
+    //Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    // users are only allowed one vote per question, for testing it might be usefull to log
+    // the anonymous user out, and create a new anonymous account on the server/phone
+    // [PFUser logOut];
+    
+    // an anonymous PFUser is created on the phone/parse-db with first time run of the app,
+    // this allows me to track questions a particular user voted on as well as questions
+    // the user has asked without an annoying first time username/password login
+    
+    // in other words users can use the app anonymously without being forced to create an account
+    
+    // a sign-in controller would be all that is needed to allow users to have full accounts
+    // all the functionallity exists in this app and the database for users, except a sign-in conroller
+    // I have added some fake users on the parse db to demonstrate this
+    
+    if (![PFUser currentUser]) {
+        [PFUser enableAutomaticUser];
+        PFUser *anonUser = [PFUser currentUser];
+        anonUser[@"anon"] = @YES;
+        anonUser[@"voteHistory"] = [NSMutableDictionary new];
+        [[PFUser currentUser] saveInBackground];
+    }
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end

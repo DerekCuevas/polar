@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PLRTableViewCell.h"
 
-@interface PLRTableViewController : UITableViewController
+@interface PLRTableViewController : UITableViewController <PLRViewCellDelegate>
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sortSegmentControl;
+
+- (void)vote:(NSString *)vote onQuestionWithId:(NSString *)objectId;
+- (IBAction)sortPolls:(UISegmentedControl *)sender;
 
 @end

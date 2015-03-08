@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PLRAskQuestionViewController : UIViewController
+@interface PLRAskQuestionViewController : UIViewController <UITextViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *questionTextView;
 
 @end
