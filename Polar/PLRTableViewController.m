@@ -71,10 +71,10 @@
 - (void)reloadData {
     if (self.sortSegmentControl.selectedSegmentIndex == 0) {
         [self.model sortDataSouceByDate];
-    }
-    else {
+    } else {
         [self.model sortDataSouceByRank];
     }
+    
     [self.tableView reloadData];
 }
 
@@ -141,8 +141,7 @@
         if ([vote isEqualToString:@"yes"]) {
             cell.yesButton.backgroundColor = self.voteColor;
             [cell.yesButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        }
-        else {
+        } else {
             cell.noButton.backgroundColor = self.voteColor;
             [cell.noButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }

@@ -35,11 +35,9 @@
     
     if (rank1 > rank2) {
         return NSOrderedAscending;
-    }
-    else if (rank1 < rank2) {
+    } else if (rank1 < rank2) {
         return NSOrderedDescending;
-    }
-    else {
+    } else {
         return NSOrderedSame;
     }
 }

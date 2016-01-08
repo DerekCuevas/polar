@@ -39,14 +39,11 @@
     
     if (self.yes == 0 && self.no == 0) {
         //show no stats message
-    }
-    else if (self.yes == 0) {
+    } else if (self.yes == 0) {
         [self drawSlice:180.0 color:noColor clockwise:YES];
-    }
-    else if (self.no == 0) {
+    } else if (self.no == 0) {
         [self drawSlice:180.0 color:yesColor clockwise:YES];
-    }
-    else {
+    } else {
         CGFloat noSlice = (self.no / (float)(self.no + self.yes)) * 180.0;
         CGFloat yesSlice = 180 - (180.0 - noSlice);
         

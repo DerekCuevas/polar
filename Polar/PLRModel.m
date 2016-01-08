@@ -75,9 +75,8 @@
             }
             self.dataSource = questions;
             completionHandler();
-        }
-        else {
-            NSLog(@"Parse Query Error: failed finding questions...");
+        } else {
+            NSLog(@"Parse Query Error: failed to find questions...");
         }
     }];
 }
@@ -87,8 +86,7 @@
     [query getObjectInBackgroundWithId:objectId block:^(PFObject *object, NSError *error) {
         if (!object) {
             NSLog(@"Parse Query Error: vote failed to find question...");
-        }
-        else {
+        } else {
             [object incrementKey:vote];
             [object saveInBackground];
         }
@@ -112,13 +110,11 @@
                     question.user = [PFUser currentUser];
                     [self.dataSource addObject:question];
                     completionHandler();
-                }
-                else {
-                    NSLog(@"Parse Error: failed update user relation");
+                } else {
+                    NSLog(@"Parse Error: failed to update user relation");
                 }
             }];
-        }
-        else {
+        } else {
             NSLog(@"Parse Error: failed to add question");
         }
     }];

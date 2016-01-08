@@ -33,8 +33,7 @@
 - (void)textViewDidChange:(UITextView *)textView {
     if (textView.text.length == 0) {
         self.placeholder.text = self.placeholderText;
-    }
-    else {
+    } else {
         self.placeholder.text = @"";
     }
 }

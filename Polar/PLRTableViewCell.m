@@ -29,8 +29,7 @@
         if ([vote isEqualToString:@"yes"]) {
             self.yesButton.backgroundColor = voteColor;
             [self.yesButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        }
-        else {
+        } else {
             self.noButton.backgroundColor = voteColor;
             [self.noButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
